@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Price</th>
       <th>Image code</th>
       <th>Restaurant</th>
       <th></th>
@@ -16,6 +17,7 @@
     <% @dishes.each do |dish| %>
       <tr>
         <td><%= dish.name %></td>
+        <td><%= dish.price %></td>
         <td><%= dish.image_code %></td>
         <td><%= dish.restaurant_id %></td>
         <td><%= link_to 'Show', dish %></td>

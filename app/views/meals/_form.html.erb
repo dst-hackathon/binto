@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :dish_image_code %><br>
-    <%= f.text_field :dish_image_code %>
+    <%= f.file_field :dish_image_code %>
   </div>
   <div class="field">
     <%= f.label :dish_name %><br>
@@ -30,6 +30,10 @@
   <div class="field">
     <%= f.label :dish_id %><br>
     <%= f.text_field :dish_id %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
   </div>
   <div class="field">
     <%= f.label :meal_date %><br>
@@ -41,7 +45,7 @@
   </div>
   <div class="field">
     <%= f.label :restaurant_image_code %><br>
-    <%= f.text_field :restaurant_image_code %>
+    <%= f.file_field :restaurant_image_code %>
   </div>
   <div class="field">
     <%= f.label :restaurant_id %><br>
