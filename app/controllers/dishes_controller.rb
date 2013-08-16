@@ -44,7 +44,7 @@ class DishesController < ApplicationController
       if @dish.update(dish_params)
         format.html { redirect_to @dish, notice: 'Dish was successfully updated.' }
         format.json { head :no_content }
-        els.e
+      else
         format.html { render action: 'edit' }
         format.json { render json: @dish.errors, status: :unprocessable_entity }
       end
