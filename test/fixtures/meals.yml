@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  consumer_name: MyString
+  consumer_id: 
+  dish_image_code: MyString
+  dish_name: MyString
+  dish_id: 
+  meal_date: 2013-08-16 16:10:03
+  restaurant_name: MyString
+  restaurant_image_code: MyString
+  restaurant_id: 
+
+two:
+  consumer_name: MyString
+  consumer_id: 
+  dish_image_code: MyString
+  dish_name: MyString
+  dish_id: 
+  meal_date: 2013-08-16 16:10:03
+  restaurant_name: MyString
+  restaurant_image_code: MyString
+  restaurant_id: 

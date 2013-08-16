@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Consumer name:</strong>
+  <%= @meal.consumer_name %>
+</p>
+
+<p>
+  <strong>Consumer:</strong>
+  <%= @meal.consumer_id %>
+</p>
+
+<p>
+  <strong>Dish image code:</strong>
+  <%= @meal.dish_image_code %>
+</p>
+
+<p>
+  <strong>Dish name:</strong>
+  <%= @meal.dish_name %>
+</p>
+
+<p>
+  <strong>Dish:</strong>
+  <%= @meal.dish_id %>
+</p>
+
+<p>
+  <strong>Meal date:</strong>
+  <%= @meal.meal_date %>
+</p>
+
+<p>
+  <strong>Restaurant name:</strong>
+  <%= @meal.restaurant_name %>
+</p>
+
+<p>
+  <strong>Restaurant image code:</strong>
+  <%= @meal.restaurant_image_code %>
+</p>
+
+<p>
+  <strong>Restaurant:</strong>
+  <%= @meal.restaurant_id %>
+</p>
+
+<%= link_to 'Edit', edit_meal_path(@meal) %> |
+<%= link_to 'Back', meals_path %>

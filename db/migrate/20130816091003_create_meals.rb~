@@ -1,0 +1,18 @@
+class CreateMeals < ActiveRecord::Migration
+  def change
+    create_table :meals do |t|
+      t.string :consumer_name
+      t.integer :consumer_id
+      t.string :dish_image_code
+      t.string :dish_name
+      t.integer :dish_id
+      t.decimal :price
+      t.datetime :meal_date
+      t.string :restaurant_name
+      t.string :restaurant_image_code
+      t.integer :restaurant_id
+
+      t.timestamps
+    end
+  end
+end
