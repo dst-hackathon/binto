@@ -1,33 +1,15 @@
-<%= form_for(@dish) do |f| %>
-  <% if @dish.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@dish.errors.count, "error") %> prohibited this dish from being saved:</h2>
-
-      <ul>
-      <% @dish.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= simple_form_for @dish, 
+                    :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
+  <fieldset>
+    <legend>Dish Information</legend>
+    <%= f.input :name %>
+    <%= f.input :image_code, :as => :file %>
+    <%= f.input :price %>
+    <%= f.input :restaurant_id %>
+    
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %> or
+      <%= link_to 'Cancel', dishes_path, :class => 'btn' %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :image_code %><br>
-    <%= f.file_field :image_code %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :restaurant_id %><br>
-    <%= f.text_field :restaurant_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  </fieldset>
 <% end %>

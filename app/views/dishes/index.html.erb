@@ -1,33 +1,35 @@
-<h1>Listing dishes</h1>
+<div class="row">
+  <h1>Listing dishes</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Image code</th>
-      <th>Restaurant</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @dishes.each do |dish| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= dish.name %></td>
-        <td><%= dish.price %></td>
-        <td><%= dish.image_code %></td>
-        <td><%= dish.restaurant_id %></td>
-        <td><%= link_to 'Show', dish %></td>
-        <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
-        <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Image code</th>
+        <th>Restaurant</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @dishes.each do |dish| %>
+        <tr>
+          <td><%= dish.name %></td>
+          <td><%= dish.price %></td>
+          <td><%= dish.image_code %></td>
+          <td><%= dish.restaurant_id %></td>
+          <td><%= link_to 'Show', dish %></td>
+          <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
+          <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Dish', new_dish_path %>
+  <br>
+  <%= link_to 'New Dish', new_dish_path %>
+</div>
+

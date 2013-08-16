@@ -27,7 +27,16 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Foundations CSS
+gem 'zurb-foundation'
+
+# Rails DSL for form
+gem "simple_form", "~> 3.0.0.rc"
+
+# Image Uploader
 gem 'carrierwave'
+
+# Wrapper for Image Magick
 gem "mini_magick"
 
 # Server & Deployment
