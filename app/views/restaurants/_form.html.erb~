@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :image_code %><br>
-    <%= f.file_field :image_code %>
+    <%= f.text_field :image_code %>
   </div>
   <div class="field">
     <%= f.label :dish_id %><br>
