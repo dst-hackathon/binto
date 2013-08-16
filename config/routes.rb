@@ -3,7 +3,9 @@ Binto::Application.routes.draw do
 
   resources :restaurants
 
-  resources :dishes
+  resources :dishes do
+    get 'suggest', on: :collection
+  end
 
   resources :consumers
 

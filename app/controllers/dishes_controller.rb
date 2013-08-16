@@ -44,7 +44,7 @@ class DishesController < ApplicationController
       if @dish.update(dish_params)
         format.html { redirect_to @dish, notice: 'Dish was successfully updated.' }
         format.json { head :no_content }
-      else
+        els.e
         format.html { render action: 'edit' }
         format.json { render json: @dish.errors, status: :unprocessable_entity }
       end
@@ -58,6 +58,14 @@ class DishesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to dishes_url }
       format.json { head :no_content }
+    end
+  end
+
+  def suggest
+    dish_ids = Dish.all.map(&:id)
+    dish_id = dish_ids[rand(dish_ids.length)]
+    respond_to do |format|
+      format.json { render json: Dish.find(dish_id) }
     end
   end
 
