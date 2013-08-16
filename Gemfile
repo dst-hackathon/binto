@@ -28,6 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'carrierwave'
+gem "mini_magick"
 
 # Server & Deployment
 gem 'unicorn'
