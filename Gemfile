@@ -41,6 +41,8 @@ gem 'delayed_job_active_record'
 # Wrapper for Image Magick
 gem "mini_magick"
 
+# Handle CORS
+gem 'rack-cors', :require => 'rack/cors'
 
 # Server & Deployment
 gem 'unicorn'
