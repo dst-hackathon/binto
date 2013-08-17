@@ -39,6 +39,9 @@ gem 'carrierwave'
 # Wrapper for Image Magick
 gem "mini_magick"
 
+# Handle CORS
+gem 'rack-cors', :require => 'rack/cors'
+
 # Server & Deployment
 gem 'unicorn'
 gem 'capistrano'
