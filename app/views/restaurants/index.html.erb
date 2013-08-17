@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Name</th>
       <th>Image code</th>
       <th>Dish</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @restaurants.each do |restaurant| %>
       <tr>
+        <td><%= restaurant.id %></td>
         <td><%= restaurant.name %></td>
         <td><%= restaurant.image_code %></td>
         <td><%= link_to 'Show', restaurant %></td>

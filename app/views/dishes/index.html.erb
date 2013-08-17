@@ -4,6 +4,7 @@
   <table>
     <thead>
       <tr>
+        <th>Id</th>
         <th>Name</th>
         <th>Price</th>
         <th>Image code</th>
@@ -18,6 +19,7 @@
     <tbody>
       <% @dishes.each do |dish| %>
         <tr>
+          <td><%= dish.id %></td>
           <td><%= dish.name %></td>
           <td><%= dish.price %></td>
           <td><%= dish.image_code %></td>
