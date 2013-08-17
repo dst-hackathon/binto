@@ -28,8 +28,10 @@ class DishesController < ApplicationController
 
     respond_to do |format|
       if @dish.save
-        format.html { redirect_to @dish, notice: 'Dish was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @dish }
+        #format.html { redirect_to @dish, notice: 'Dish was successfully created.' }
+        #format.json { render action: 'show', status: :created, location: @dish }
+        format.json { render :json => { "success" => true, "dish" => @dish.as_json(only: [:id]) }, status: :created }
+        format.html { render :json => { "success" => true, "dish" => @dish.as_json(only: [:id]) }, status: :created }
       else
         format.html { render action: 'new' }
         format.json { render json: @dish.errors, status: :unprocessable_entity }
