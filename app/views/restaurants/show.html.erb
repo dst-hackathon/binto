@@ -11,10 +11,5 @@
   <%= image_tag(@restaurant.image_code) %>
 </p>
 
-<p>
-  <strong>Dish:</strong>
-  <%= @restaurant.dish_id %>
-</p>
-
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>

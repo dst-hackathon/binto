@@ -8,6 +8,7 @@
         <th>Price</th>
         <th>Image code</th>
         <th>Restaurant</th>
+        <th>Restaurant Name</th>
         <th></th>
         <th></th>
         <th></th>
@@ -21,6 +22,7 @@
           <td><%= dish.price %></td>
           <td><%= dish.image_code %></td>
           <td><%= dish.restaurant_id %></td>
+          <td><%= dish.restaurant_name %></td>
           <td><%= link_to 'Show', dish %></td>
           <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
           <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
