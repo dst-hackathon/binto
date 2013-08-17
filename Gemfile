@@ -35,9 +35,14 @@ gem "simple_form", "~> 3.0.0.rc"
 
 # Image Uploader
 gem 'carrierwave'
+gem 'carrierwave_backgrounder'
+gem 'delayed_job_active_record'
 
 # Wrapper for Image Magick
 gem "mini_magick"
+
+# Handle CORS
+gem 'rack-cors', :require => 'rack/cors'
 
 # Server & Deployment
 gem 'unicorn'
