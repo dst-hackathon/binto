@@ -7,6 +7,7 @@ class Dish < ActiveRecord::Base
 	end
 	
 	def populate_restaurant(restaurant_name)
+		restaurant_id = nil
 		if !restaurant_name.blank?
 			exist_restaurant = Restaurant.where("name like ?", "%#{restaurant_name}%").first
 			if exist_restaurant.blank?
