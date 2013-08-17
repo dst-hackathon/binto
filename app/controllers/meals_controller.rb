@@ -24,7 +24,8 @@ class MealsController < ApplicationController
   # POST /meals
   # POST /meals.json
   def create
-    @meal = Meal.new(meal_params)
+    #@meal = Meal.new(meal_params)
+    @meal = Meal.populate(meal_params, session[:consumer])
 
     respond_to do |format|
       if @meal.save
