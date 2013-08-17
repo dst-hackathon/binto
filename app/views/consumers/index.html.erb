@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Name</th>
       <th>Email</th>
       <th></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @consumers.each do |consumer| %>
       <tr>
+        <td><%= consumer.id %></td>
         <td><%= consumer.name %></td>
         <td><%= consumer.email %></td>
         <td><%= link_to 'Show', consumer %></td>

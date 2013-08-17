@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Consumer name</th>
       <th>Consumer</th>
       <th>Dish image code</th>
@@ -22,6 +23,7 @@
   <tbody>
     <% @meals.each do |meal| %>
       <tr>
+        <td><%= meal.id %></td>
         <td><%= meal.consumer_name %></td>
         <td><%= meal.consumer_id %></td>
         <td><%= meal.dish_image_code %></td>
