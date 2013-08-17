@@ -62,10 +62,18 @@ class DishesController < ApplicationController
   end
 
   def suggest
-    dish_ids = Dish.all.map(&:id)
+  	if session[:dish_ids].blank?  	
+    	dish_ids = Dish.all.map(&:id)
+    	session[:dish_ids] = dish_ids
+    else
+    	dish_ids = session[:dish_ids]
+    end
+    
     dish_id = dish_ids[rand(dish_ids.length)]
-    respond_to do |format|
-      format.json { render json: Dish.find(dish_id) }
+    session[:dish_ids].delete(dish_id)
+    
+   respond_to do |format|
+      format.json { @dish = Dish.find(dish_id)  }
     end
   end
 
