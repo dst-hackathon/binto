@@ -24,7 +24,18 @@ class DishesController < ApplicationController
   # POST /dishes
   # POST /dishes.json
   def create
-    @dish = Dish.new(dish_params)
+  	#logger.debug("\n\n\n\n#{dish_params.inspect}\n\n\n\n\n")
+  
+  	#restaurant_name = dish_params.delete("restaurant_name")
+  	
+  	#logger.debug("\n\n\n\n#{dish_params.delete("restaurant_name")}\n\n\n\n\n")
+  
+    @dish = Dish.new()
+    @dish.name = dish_params[:name]
+    @dish.image_code = dish_params[:image_code]
+    @dish.price = dish_params[:price]
+    
+    @dish.restaurant_id = @dish.populate_restaurant(dish_params[:restaurant_name])
 
     respond_to do |format|
       if @dish.save
@@ -87,6 +98,6 @@ class DishesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dish_params
-      params.require(:dish).permit(:name, :image_code, :price, :restaurant_id)
+      params.require(:dish).permit(:name, :image_code, :price, :restaurant_id, :restaurant_name)
     end
 end
