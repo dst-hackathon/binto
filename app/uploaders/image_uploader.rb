@@ -30,39 +30,40 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
+  process :resize_to_fit => [1920,10000]
 
   # Create different versions of your uploaded files:
   # version :thumb do
   #   process :scale => [50, 50]
   # end
-  version :mobile_small do
-    #process :resize_to_fill => [480,360]
-    process :resize_to_fit => [480,10000]
-  end
+ #  version :mobile_small do
+ #    #process :resize_to_fill => [480,360]
+ #    process :resize_to_fit => [480,10000]
+ #  end
   
-  version :mobile_large do
-    #process :resize_to_fill => [800,600]
-    process :resize_to_fit => [800,10000]
-  end
+ #  version :mobile_large do
+ #    #process :resize_to_fill => [800,600]
+ #    process :resize_to_fit => [800,10000]
+ #  end
   
-  version :tablet_small do
-    #process :resize_to_fill => [1024,768]
-    process :resize_to_fit => [1024,10000]
-  end
+ #  version :tablet_small do
+ #    #process :resize_to_fill => [1024,768]
+ #    process :resize_to_fit => [1024,10000]
+ #  end
   
-  version :tablet_medium do
-  	#process :resize_to_fill => [1280,960]
-  	process :resize_to_fit => [1280,10000]
-  end
+ #  version :tablet_medium do
+ #  	#process :resize_to_fill => [1280,960]
+ #  	process :resize_to_fit => [1280,10000]
+ #  end
   
-  version :tablet_large do
-    #process :resize_to_fill => [1920,1440]
-    process :resize_to_fit => [1920,10000]
-  end
+ #  version :tablet_large do
+ #    #process :resize_to_fill => [1920,1440]
+ #    process :resize_to_fit => [1920,10000]
+ #  end
   
-  version :thumbnail do
-	process :resize_to_fill => [150,150]
-  end
+ #  version :thumbnail do
+	# process :resize_to_fill => [150,150]
+ #  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
